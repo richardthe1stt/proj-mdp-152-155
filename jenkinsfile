@@ -12,15 +12,15 @@ pipeline {
                      url: 'https://github.com/richardthe1stt/proj-mdp-152-155.git'
             }
         }
-        // Stage 3: Build Docker Image
+        // Stage 2: Build Docker Image
         stage('Docker Build') {
             steps {
                 script {
-                    sh "docker build -t ${DOCKER_IMAGE}:${env.BUILD_NUMBER} -t ${DOCKER_IMAGE}:latest ."
+                    sh "sudo docker build -t ${DOCKER_IMAGE}:${env.BUILD_NUMBER} -t ${DOCKER_IMAGE}:latest ."
                 }
             }
         }
-        // Stage 4: Push to Docker Hub
+        // Stage 3: Push to Docker Hub
         stage('Docker Push') {
             steps {
                 script {
