@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'richardthe1stt'
+        DOCKER_IMAGE = 'richardthe1stt/calculator'
         DOCKER_CREDENTIALS_ID = 'new-credentials'
     }
     stages {
