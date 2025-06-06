@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'richardthe1stt'
-        DOCKER_CREDENTIALS_ID = 'project-1-cerdentials'
+        DOCKER_CREDENTIALS_ID = 'new-credentials'
     }
     stages {
         // Stage 1: Clone Repository
