@@ -55,6 +55,7 @@
     - name: Show validation output
       debug:
         var: kops_validate_cluster.stdout_lines
+
         var: kops_create_cluster.stdout
       when: kops_create_cluster is defined and kops_create_cluster.stdout is not none
       register: kops_create_cluster_output
