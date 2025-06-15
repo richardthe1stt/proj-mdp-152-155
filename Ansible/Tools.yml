@@ -1,6 +1,6 @@
 ---
 - name: Install AWS CLI, kops, and kubectl
-  hosts: k8s_workstation
+  hosts: k8ws_workstation
   become: yes
   tasks:
     - name: Update and install packages
@@ -17,7 +17,7 @@
       changed_when: false
     - name: Download and install kubectl
       get_url:
-        url: "https://dl.k8s.io/release/{{ stable_version.stdout }}/bin/linux/amd64/kubectl"
+        url: "https://dl.k8ws.io/release/{{ stable_version.stdout }}/bin/linux/amd64/kubectl"
         dest: /usr/local/bin/kubectl
         mode: '0755'
         force: yes

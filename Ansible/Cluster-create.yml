@@ -1,10 +1,10 @@
 - name: Create Kubernetes cluster
-  hosts: k8s_workstation
+  hosts: k8ws_workstation
   become: yes
   vars:
-    cluster_name: "mycluster.k8s.local"
-    state_store: "k8s-kops-everything-state-chsufg1"
-    zones: "us-east-1a,us-east-1b"
+    cluster_name: "mycluster.k8ws.local"
+    state_store: "k8ws-kops-everything-state-chsufg1"
+    zones: "us-east-2a,us-east-2b"
     node_count: 2
     node_size: "t2.medium"
     master_size: "t2.medium"

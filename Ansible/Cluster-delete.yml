@@ -1,9 +1,9 @@
 ---
 - name: Delete Kubernetes cluster using Kops
-  hosts: k8s_workstation
+  hosts: k8ws_workstation
   become: yes
   vars:
-    cluster_name: "mycluster.k8s.local"
+    cluster_name: "mycluster.k8ws.local"
     state_store: "k8s-kops-everything-state-chsufg1"
   tasks:
     - name: Ensure Kops is installed
